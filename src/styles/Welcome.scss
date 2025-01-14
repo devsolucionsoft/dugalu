@@ -1,0 +1,323 @@
+// Variables
+$background-color: rgba(0, 0, 0, 0.8);
+$primary-color: #d4145a;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0 !important;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: $primary-color;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0em;
+  }
+}
+
+#banner {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: $background-color;
+  position: relative;
+  #background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  #hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: white;
+    max-width: 1400px;
+    height: 100%;
+    padding: 5%;
+    h1 {
+      font-weight: 400;
+      font-style: normal;
+      color: white;
+      font-kerning: none;
+      text-decoration: none;
+      font-size: 70px;
+      line-height: 77px;
+      letter-spacing: -0.04em;
+      text-align: left;
+      span {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+#goal {
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    .message {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h2 {
+        font-weight: 400;
+        font-style: normal;
+        color: $primary-color;
+        font-kerning: none;
+        font-size: 61px;
+        line-height: 66px;
+        letter-spacing: -0.05em;
+      }
+      h3 {
+        color: black;
+        font-weight: 400;
+        font-kerning: none;
+        text-decoration: none;
+        font-size: 32px;
+        line-height: 34px;
+        letter-spacing: -0.05em;
+      }
+    }
+    .items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .title {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          color: $primary-color;
+          font-weight: 500;
+          font-size: 27px;
+          line-height: 26px;
+          letter-spacing: -0.05em;
+          h3 {
+            font-weight: 500 !important;
+            font-size: 27px !important;
+          }
+        }
+        video {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 16 / 9;
+        }
+        h4 {
+          color: black;
+          font-weight: 400;
+          font-size: 17px;
+          line-height: 22px;
+          letter-spacing: 0em;
+        }
+      }
+    }
+  }
+}
+
+#services {
+  display: flex;
+  position: relative;
+  $background-color: rgba(0, 0, 0, 0.8);
+  #background-video-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: white;
+    max-width: 1400px;
+    height: 100%;
+    padding: 5%;
+    margin: 0 auto;
+    gap: 100px;
+    .message {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      h2 {
+        color: white;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 89px;
+        letter-spacing: -0.02em;
+      }
+      h3 {
+        color: white;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 33px;
+        letter-spacing: 0em;
+      }
+    }
+    .items {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+      .item {
+        display: flex;
+        padding: 16px;
+        width: 100%;
+        border-radius: 40px;
+        color: white;
+        font-size: 24px;
+        line-height: 33px;
+        letter-spacing: 0em;
+        border: 1px solid white;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
+}
+
+#clients {
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 5%;
+    h3 {
+      font-weight: 400;
+      color: black;
+      font-size: 64px;
+      line-height: 89px;
+      letter-spacing: -0.02em;
+      text-align: left;
+    }
+    .clients {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 40px;
+      align-items: center;
+      img {
+        width: 100%;
+        height: auto;
+        max-width: 200px;
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  position: relative;
+  background: $background-color;
+  #background-video-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    max-width: 1400px;
+    height: 100%;
+    padding: 10% 5%;
+    margin: 0 auto;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+    @media (max-width: 1200px) {
+      flex-wrap: wrap;
+    }
+    .col {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h4 {
+        font-weight: 400;
+        font-size: 59px;
+        line-height: 67px;
+        letter-spacing: -0.02em;
+        margin-bottom: 40px !important;
+      }
+      .sec {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .item {
+          color: white;
+          font-size: 23px;
+          line-height: 31px;
+          letter-spacing: 0em;
+          white-space: nowrap;
+          font-weight: 200;
+          span {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    .socials {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: center;
+      a {
+        width: 44px;
+        height: 44px;
+        img {
+          max-width: 44px;
+        }
+      }
+    }
+  }
+}
