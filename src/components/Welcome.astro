@@ -17,6 +17,7 @@ import instagram from '../assets/images/socials/whatsapp.png';
 import sales from '../assets/videos/sales.mp4';
 import marketing from '../assets/videos/marketing.mp4';
 import technology from '../assets/videos/technology.mp4';
+import Carousel from './Carousel.astro';
 ---
 
 <header>
@@ -29,7 +30,7 @@ import technology from '../assets/videos/technology.mp4';
     Tu navegador no soporta videos.
   </video>
 
-  <section id="hero">
+  <section data-aos="fade-up" data-aos-duration="2000" id="hero">
     <img src={dugaluLogo.src} width="145" height="45" alt="Astro Homepage" />
     <h1>Somos una compañía especializada en <span>marketing</span>, ventas & tecnología. </h1>
     <div/>
@@ -38,7 +39,7 @@ import technology from '../assets/videos/technology.mp4';
 
 <div id="goal">
   <div class="content">
-    <div class="message">
+    <div data-aos="fade-right"  class="message">
       <h2>Nuestra Meta</h2>
       <h3>Ayudarte a organizar y alinear tres áreas clave de tu empresa: marketing, ventas y tecnología,  para que logres un crecimiento rentable y sostenible.</h3>
     </div>
@@ -49,9 +50,11 @@ import technology from '../assets/videos/technology.mp4';
           <span>01</span>
           <h3>Marketing</h3>
         </div>
-        <video autoplay loop muted playsinline preload="auto" controls>
-          <source src={marketing} type="video/mp4" />
-          Tu navegador no soporta videos.
+        <div class="video-container">
+          <video data-aos="fade-right" data-aos-delay="500" data-aos="fade-right" autoplay loop muted playsinline preload="auto" controls>
+            <source src={marketing} type="video/mp4" />
+            Tu navegador no soporta videos.
+        </div>
         </video>
         <h4>
           Impulsamos tu marca para que ganes mayor visibilidad y multipliques tus oportunidades de negocio. 
@@ -63,10 +66,12 @@ import technology from '../assets/videos/technology.mp4';
           <span>02</span>
           <h3>Ventas </h3>
         </div>
-        <video autoplay loop muted playsinline preload="auto" controls>
-          <source src={sales} type="video/mp4" />
-          Tu navegador no soporta videos.
-        </video>
+        <div class="video-container">
+          <video data-aos="fade-right" data-aos-delay="600" autoplay loop muted playsinline preload="auto" controls>
+            <source src={sales} type="video/mp4" />
+            Tu navegador no soporta videos.
+          </video>
+        </div>
         <h4>
           Entrenamos a tu equipo comercial para que gestione mejor los leads generados por marketing, logres más ventas y tengas un mayor retorno de inversión.
         </h4>
@@ -77,10 +82,12 @@ import technology from '../assets/videos/technology.mp4';
           <span>03</span>
           <h3>Tecnología</h3>
         </div>
-        <video autoplay loop muted playsinline preload="auto" controls>
-          <source src={technology} type="video/mp4" />
-          Tu navegador no soporta videos.
-        </video>
+        <div class="video-container">
+          <video data-aos="fade-right" data-aos-delay="700" autoplay loop muted playsinline preload="auto" controls>
+            <source src={technology} type="video/mp4" />
+            Tu navegador no soporta videos.
+          </video>
+        </div>
         <h4>
           Te asesoramos en la implementación y uso de la mejor tecnología para automatizar tu proceso de marketing, ventas y servicio al cliente.
         </h4>
@@ -104,15 +111,15 @@ import technology from '../assets/videos/technology.mp4';
       </h3>
     </div>
     <div class="items">
-      <div class="item">Consultoría y acompañamiento estratégico</div>
-      <div class="item">Inbound Marketing</div>
-      <div class="item">Pauta Ditial</div>
-      <div class="item">Influencer Marketing </div>
-      <div class="item">Diseño UX - UI </div>
-      <div class="item">Ingeniería web</div>
-      <div class="item">Estructuración proceso de ventas </div>
-      <div class="item">Capacitación equipo de ventas </div>
-      <div class="item">Automatización</div>
+      <div class="item" data-aos="fade-right" data-aos-delay="300">Consultoría y acompañamiento estratégico</div>
+      <div class="item" data-aos="fade-right" data-aos-delay="200">Inbound Marketing</div>
+      <div class="item" data-aos="fade-right" data-aos-delay="100">Pauta Digital</div>
+      <div class="item" data-aos="fade-right" data-aos-delay="600">Influencer Marketing</div>
+      <div class="item" data-aos="fade-right" data-aos-delay="500">Diseño UX - UI</div>
+      <div class="item" data-aos="fade-right" data-aos-delay="400">Ingeniería web</div>
+      <div class="item" data-aos="fade-right" data-aos-delay="900">Estructuración proceso de ventas</div>
+      <div class="item" data-aos="fade-right" data-aos-delay="800">Capacitación equipo de ventas</div>
+      <div class="item" data-aos="fade-right" data-aos-delay="700">Automatización</div>
     </div>
   </div>
 </div>
@@ -121,15 +128,16 @@ import technology from '../assets/videos/technology.mp4';
   <div class="content">
     <h3>Algunos de nuestro clientes</h3>
     <div class="clients">
-      <img src={manuelita.src} alt="Manuelita" />
-      <img src={segurosMundial.src} alt="Seguros Mundial" />
-      <img src={dinant.src} alt="Dinant" />
-      <img src={adea.src} alt="Adea" />
-      <img src={detektor.src} alt="Detektor" />  
-      <img src={indumil.src} alt="Indumil" />
-      <img src={prolibu.src} alt="Prolibu" />
-      <img src={macarena.src} alt="Macarena" />
+      <img data-aos="fade-up" data-aos-delay="100" src={manuelita.src} alt="Manuelita" />
+      <img data-aos="fade-up" data-aos-delay="200" src={segurosMundial.src} alt="Seguros Mundial" />
+      <img data-aos="fade-up" data-aos-delay="300" src={dinant.src} alt="Dinant" />
+      <img data-aos="fade-up" data-aos-delay="400" src={adea.src} alt="Adea" />
+      <img data-aos="fade-up" data-aos-delay="100" src={detektor.src} alt="Detektor" />  
+      <img data-aos="fade-up" data-aos-delay="200" src={indumil.src} alt="Indumil" />
+      <img data-aos="fade-up" data-aos-delay="300" src={prolibu.src} alt="Prolibu" />
+      <img data-aos="fade-up" data-aos-delay="400" src={macarena.src} alt="Macarena" />
     </div>
+    <Carousel images={[manuelita, segurosMundial, dinant, adea, detektor, indumil, prolibu, macarena]}/>
   </div>
 </div>
 
