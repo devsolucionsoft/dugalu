@@ -214,6 +214,9 @@ header {
       width: 100%;
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
       gap: 16px;
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
       .item {
         display: flex;
         align-items: center;
@@ -357,6 +360,9 @@ footer {
   width: 100%;
   height: auto;
   position: relative;
+  display: flex !important;
+  flex-direction: column;
+  gap: 20px;
   @media (min-width: 768px) {
     display: none !important;
   }
@@ -376,6 +382,26 @@ footer {
         object-fit: contain;
         max-width: 250px;
       }
+    }
+  }
+  .swiper-pagination {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    bottom: 0 !important;
+    .swiper-pagination-bullet {
+      background: black;
+      opacity: 0.5;
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      border-radius: 50%;
+      display: inline-block;
+      transition: opacity 0.3s;
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1;
     }
   }
 }

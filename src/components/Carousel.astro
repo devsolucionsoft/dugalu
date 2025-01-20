@@ -10,20 +10,28 @@ const { images } = Astro.props;
       </div>
     ))}
   </div>
+  <div class="swiper-pagination"></div>
 </div>
 
 <script>
   import Swiper from 'swiper';
-  import { Autoplay } from "swiper/modules";
+  import { Autoplay, Pagination } from "swiper/modules";
   import 'swiper/css';
+  import 'swiper/css/pagination';
   
   var swiper = new Swiper('.swiper', {
-    modules: [Autoplay],
+    modules: [Autoplay, Pagination],
     autoplay: {
       delay: 1500,
       disableOnInteraction: false,
     },
     loop: true,
     speed: 2000,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      bulletClass: 'swiper-pagination-bullet',
+      bulletActiveClass: 'swiper-pagination-bullet-active',
+    },
   });
 </script>
