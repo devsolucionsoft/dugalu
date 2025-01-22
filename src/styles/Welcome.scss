@@ -1,5 +1,4 @@
 // Variables
-$background-color: rgba(0, 0, 0, 0.8);
 $primary-color: #d4145a;
 
 h1,
@@ -19,28 +18,28 @@ p {
 
 header {
   background-color: $primary-color;
-  height: 5vh;
+  height: 6vh;
   padding: 0 5%;
   display: flex;
   align-items: center;
   justify-content: center;
   p {
     color: white;
-    font-weight: 400;
-    font-size: clamp(0.9rem, 2.5vw, 1.125rem);
+    font-weight: 300;
+    font-size: clamp(0.9rem, 2.5vw, 1.05rem);
     line-height: 1.2;
     letter-spacing: 0em;
   }
 }
 
 #banner {
-  height: 95vh;
+  height: 94vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: $background-color;
+  background: rgba(0, 0, 0, 0.8);
   position: relative;
   #background-video {
     position: absolute;
@@ -77,6 +76,7 @@ header {
       line-height: 1.2;
       letter-spacing: -0.04em;
       text-align: left;
+      max-width: 1100px;
       span {
         color: $primary-color;
       }
@@ -88,6 +88,7 @@ header {
   background-color: white;
   align-items: center;
   justify-content: center;
+  width: 100%;
   .content {
     display: flex;
     flex-direction: column;
@@ -97,10 +98,13 @@ header {
     align-items: center;
     justify-content: center;
     padding: 5%;
+    width: 100%;
     .message {
       display: flex;
       flex-direction: column;
       gap: 20px;
+      width: 100%;
+
       h2 {
         font-weight: 400;
         font-style: normal;
@@ -112,12 +116,13 @@ header {
       }
       h3 {
         color: black;
-        font-weight: 400;
+        font-weight: 300;
         font-kerning: none;
         text-decoration: none;
         font-size: clamp(1.5rem, 3vw, 2rem);
         line-height: clamp(1.75rem, 3.5vw, 2.125rem);
         letter-spacing: -0.05em;
+        max-width: 1000px;
       }
     }
     .items {
@@ -133,7 +138,7 @@ header {
           flex-direction: column;
           gap: 4px;
           color: $primary-color;
-          font-weight: 500;
+          font-weight: 400;
           font-size: clamp(1.25rem, 3vw, 1.6875rem);
           line-height: clamp(1.5rem, 3.5vw, 1.625rem);
           letter-spacing: -0.05em;
@@ -153,7 +158,7 @@ header {
         }
         h4 {
           color: black;
-          font-weight: 400;
+          font-weight: 300;
           font-size: clamp(0.9375rem, 2vw, 1.0625rem);
           line-height: clamp(1.25rem, 2.5vw, 1.375rem);
           letter-spacing: 0em;
@@ -166,7 +171,7 @@ header {
 #services {
   display: flex;
   position: relative;
-  $background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
   #background-video-2 {
     position: absolute;
     top: 0;
@@ -184,9 +189,10 @@ header {
     color: white;
     max-width: 1400px;
     height: 100%;
-    padding: 5%;
+    padding: 5% 5% 7% 5%;
     margin: 0 auto;
     gap: 100px;
+    width: 100%;
     @media (max-width: 1200px) {
       gap: 25px;
     }
@@ -194,6 +200,7 @@ header {
       display: flex;
       flex-direction: column;
       gap: 30px;
+      width: 100%;
       h2 {
         color: white;
         font-weight: 400;
@@ -203,17 +210,18 @@ header {
       }
       h3 {
         color: white;
-        font-weight: 400;
+        font-weight: 300;
         font-size: clamp(1.4rem, 3vw, 1.5rem);
         line-height: 1.2;
         letter-spacing: 0em;
+        max-width: 1000px;
       }
     }
     .items {
       display: grid;
       width: 100%;
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 16px;
+      gap: 40px;
       @media (max-width: 768px) {
         grid-template-columns: repeat(1, 1fr);
       }
@@ -242,11 +250,11 @@ header {
   .content {
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 110px;
     max-width: 1400px;
     margin: 0 auto;
     justify-content: center;
-    padding: 10% 5%;
+    padding: 7% 5% 13% 5%;
     @media (max-width: 1200px) {
       gap: 50px;
     }
@@ -262,7 +270,7 @@ header {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 40px;
-      justify-items: center;
+      justify-items: flex-start;
       align-items: center;
       @media (max-width: 1250px) {
         grid-template-columns: repeat(2, 1fr);
@@ -273,7 +281,7 @@ header {
       img {
         max-height: 70px;
         height: auto;
-        max-width: 200px;
+        max-width: 220px;
       }
     }
   }
@@ -282,7 +290,7 @@ header {
 footer {
   display: flex;
   position: relative;
-  background: $background-color;
+  background: rgba(0, 0, 0, 0.9);
   #background-video-3 {
     position: absolute;
     top: 0;
@@ -298,11 +306,12 @@ footer {
     color: white;
     max-width: 1400px;
     height: 100%;
-    padding: 15% 5%;
+    padding: 8% 5% 11% 5%;
     margin: 0 auto;
     gap: 20px;
     justify-content: space-between;
     align-items: flex-end;
+    width: 100%;
     @media (max-width: 1200px) {
       flex-wrap: wrap;
     }
@@ -316,6 +325,7 @@ footer {
         line-height: 1.2;
         letter-spacing: -0.02em;
         margin-bottom: 40px !important;
+        max-width: 550px;
         @media (max-width: 1200px) {
           margin-bottom: 20px !important;
         }
