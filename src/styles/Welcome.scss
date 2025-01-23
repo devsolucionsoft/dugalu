@@ -18,7 +18,7 @@ p {
 
 header {
   background-color: $primary-color;
-  height: 7vh;
+  height: 6vh;
   padding: 0 5%;
   display: flex;
   align-items: center;
@@ -33,7 +33,8 @@ header {
 }
 
 #banner {
-  height: 93vh;
+  min-height: 94vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,7 +59,8 @@ header {
     color: white;
     max-width: 1400px;
     height: 100%;
-    padding: 5%;
+    padding: 10% 5%;
+    width: 100%;
     @media (max-width: 768px) {
       padding: 10% 5%;
       img {
@@ -72,7 +74,7 @@ header {
       color: white;
       font-kerning: none;
       text-decoration: none;
-      font-size: clamp(2rem, 13vw, 4.375rem);
+      font-size: clamp(3rem, 10vw, 4.375rem);
       line-height: 1.2;
       letter-spacing: -0.04em;
       text-align: left;
@@ -102,7 +104,7 @@ header {
     .message {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 15px;
       width: 100%;
 
       h2 {
@@ -128,7 +130,7 @@ header {
     .items {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-      gap: 16px;
+      gap: 29px;
       .item {
         display: flex;
         flex-direction: column;
@@ -162,6 +164,7 @@ header {
           font-size: clamp(0.9375rem, 2vw, 1.0625rem);
           line-height: clamp(1.25rem, 2.5vw, 1.375rem);
           letter-spacing: 0em;
+          width: 97%;
         }
       }
     }
@@ -171,7 +174,7 @@ header {
 #services {
   display: flex;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.8);
   #background-video-2 {
     position: absolute;
     top: 0;
@@ -233,11 +236,13 @@ header {
         padding: 16px 24px;
         border-radius: 50px;
         color: white;
-        font-size: clamp(1.2rem, 3.5vw, 1.4rem);
+        font-size: clamp(1.2rem, 2vw, 1.4rem);
         line-height: 1.2;
         letter-spacing: 0em;
         border: 1px solid white;
-        height: 80px;
+        min-height: 60px;
+        height: 5vw;
+        max-height: 70px;
       }
     }
   }
@@ -314,6 +319,7 @@ footer {
     width: 100%;
     @media (max-width: 1200px) {
       flex-wrap: wrap;
+      padding: 20% 5% 40% 5%;
     }
     .col {
       display: flex;
@@ -329,14 +335,14 @@ footer {
         @media (max-width: 1200px) {
           margin-bottom: 20px !important;
         }
+        @media (max-width: 768px) {
+          margin-bottom: 0px !important;
+        }
       }
       .sec {
         display: flex;
         flex-direction: column;
-        gap: 8px;
-        @media (max-width: 1200px) {
-          gap: 2px;
-        }
+        gap: 0px;
         .item {
           color: white;
           font-size: clamp(1.25rem, 3vw, 1.4375rem);
@@ -358,8 +364,15 @@ footer {
       a {
         width: 44px;
         height: 44px;
+        @media (max-width: 768px) {
+          width: 35px;
+          height: 35px;
+        }
         img {
           max-width: 44px;
+          @media (max-width: 768px) {
+            max-width: 35px;
+          }
         }
       }
     }
