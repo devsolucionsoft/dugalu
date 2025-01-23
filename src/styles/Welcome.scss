@@ -18,7 +18,7 @@ p {
 
 header {
   background-color: $primary-color;
-  height: 6vh;
+  height: 8vh;
   padding: 0 5%;
   display: flex;
   align-items: center;
@@ -33,7 +33,7 @@ header {
 }
 
 #banner {
-  height: 94vh;
+  height: 92vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,7 +60,7 @@ header {
     height: 100%;
     padding: 5%;
     @media (max-width: 768px) {
-      padding: 10%;
+      padding: 10% 5%;
       img {
         max-width: 30vw;
         height: auto;
