@@ -33,8 +33,8 @@ header {
 }
 
 #banner {
-  min-height: 94vh;
-  height: 100%;
+  height: 90vh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,10 +59,10 @@ header {
     color: white;
     max-width: 1400px;
     height: 100%;
-    padding: 10% 5%;
+    padding: 10% 7%;
     width: 100%;
     @media (max-width: 768px) {
-      padding: 10% 5%;
+      padding: 10% 7%;
       img {
         max-width: 30vw;
         height: auto;
@@ -94,12 +94,12 @@ header {
   .content {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 70px;
     max-width: 1400px;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
-    padding: 5%;
+    padding: 5% 7%;
     width: 100%;
     .message {
       display: flex;
@@ -192,7 +192,7 @@ header {
     color: white;
     max-width: 1400px;
     height: 100%;
-    padding: 5% 5% 7% 5%;
+    padding: 5% 7% 7% 7%;
     margin: 0 auto;
     gap: 100px;
     width: 100%;
@@ -259,7 +259,7 @@ header {
     max-width: 1400px;
     margin: 0 auto;
     justify-content: center;
-    padding: 7% 5% 13% 5%;
+    padding: 7% 7% 13% 7%;
     @media (max-width: 1200px) {
       gap: 50px;
     }
@@ -307,28 +307,48 @@ footer {
   }
   .content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     color: white;
     max-width: 1400px;
     height: 100%;
-    padding: 8% 5% 11% 5%;
+    padding: 8% 7% 19% 7%;
     margin: 0 auto;
-    gap: 20px;
-    justify-content: space-between;
-    align-items: flex-end;
+    gap: 40px;
     width: 100%;
     @media (max-width: 1200px) {
       flex-wrap: wrap;
-      padding: 20% 5% 40% 5%;
+      padding: 20% 7% 40% 7%;
     }
-    .col {
+    .footer-items {
       display: flex;
-      flex-direction: column;
-      gap: 20px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      .col {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .sec {
+          display: flex;
+          flex-direction: column;
+          gap: 0px;
+          .item {
+            color: white;
+            font-size: clamp(1.25rem, 3vw, 1.4375rem);
+            line-height: clamp(1.75rem, 3.5vw, 1.9375rem);
+            letter-spacing: 0em;
+            white-space: nowrap;
+            font-weight: 200;
+            span {
+              font-weight: 600;
+            }
+          }
+        }
+      }
       h4 {
         font-weight: 400;
         font-size: clamp(3rem, 4.5vw, 3.6875rem);
-        line-height: 1.2;
+        line-height: 1;
         letter-spacing: -0.02em;
         margin-bottom: 40px !important;
         max-width: 550px;
@@ -339,39 +359,24 @@ footer {
           margin-bottom: 0px !important;
         }
       }
-      .sec {
+      .socials {
         display: flex;
-        flex-direction: column;
-        gap: 0px;
-        .item {
-          color: white;
-          font-size: clamp(1.25rem, 3vw, 1.4375rem);
-          line-height: clamp(1.75rem, 3.5vw, 1.9375rem);
-          letter-spacing: 0em;
-          white-space: nowrap;
-          font-weight: 200;
-          span {
-            font-weight: 600;
-          }
-        }
-      }
-    }
-    .socials {
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
-      align-items: center;
-      a {
-        width: 44px;
-        height: 44px;
-        @media (max-width: 768px) {
-          width: 35px;
-          height: 35px;
-        }
-        img {
-          max-width: 44px;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        align-self: flex-end;
+        a {
+          width: 44px;
+          height: 44px;
           @media (max-width: 768px) {
-            max-width: 35px;
+            width: 35px;
+            height: 35px;
+          }
+          img {
+            max-width: 44px;
+            @media (max-width: 768px) {
+              max-width: 35px;
+            }
           }
         }
       }

@@ -52,7 +52,7 @@ import Carousel from './Carousel.astro';
           <h3>Marketing</h3>
         </div>
         <div class="video-container">
-          <video data-aos="fade-right" data-aos-delay="500" data-aos="fade-right" autoplay loop muted playsinline preload="auto" controls>
+          <video data-aos="fade-right" data-aos-delay="500" data-aos="fade-right" autoplay loop muted playsinline preload="auto">
             <source src={marketing} type="video/mp4" />
             Tu navegador no soporta videos.
         </div>
@@ -68,7 +68,7 @@ import Carousel from './Carousel.astro';
           <h3>Ventas </h3>
         </div>
         <div class="video-container">
-          <video data-aos="fade-right" data-aos-delay="600" autoplay loop muted playsinline preload="auto" controls>
+          <video data-aos="fade-right" data-aos-delay="600" autoplay loop muted playsinline preload="auto">
             <source src={sales} type="video/mp4" />
             Tu navegador no soporta videos.
           </video>
@@ -84,7 +84,7 @@ import Carousel from './Carousel.astro';
           <h3>Tecnología</h3>
         </div>
         <div class="video-container">
-          <video data-aos="fade-right" data-aos-delay="700" autoplay loop muted playsinline preload="auto" controls>
+          <video data-aos="fade-right" data-aos-delay="700" autoplay loop muted playsinline preload="auto">
             <source src={technology} type="video/mp4" />
             Tu navegador no soporta videos.
           </video>
@@ -149,37 +149,38 @@ import Carousel from './Carousel.astro';
   </video>
 
   <div class="content">
-    <div class="col">
-      <img src={dugaluLogo.src} width="109" height="37" alt="Dugalu" />
-      <h4>¿Quieres aumentar tus ventas?</h4>
-    </div>
+    <img src={dugaluLogo.src} width="109" height="37" alt="Dugalu" />
 
-    <div class="col">
-      <div class="sec">
-        <div class="item">
-          <span>Escríbenos: </span>conecta@dugalu.com
+    <div class="footer-items">
+      <h4>¿Quieres aumentar tus ventas?</h4>
+
+      <div class="col">
+        <div class="sec">
+          <div class="item">
+            <span>Escríbenos: </span>conecta@dugalu.com
+          </div>
+          <div class="item">
+            <span>Teléfono: </span>+573107967925
+          </div>
         </div>
-        <div class="item">
-          <span>Teléfono: </span>+573107967925
+        <div class="sec">
+          <div class="item">
+            <span>Carrera 59 # 152-19 Piso 3</span>
+          </div>
+          <div class="item">
+            Bogotá - Colombia 
+          </div>
         </div>
       </div>
-      <div class="sec">
-        <div class="item">
-          <span>Carrera 59 # 152-19 Piso 3</span>
-        </div>
-        <div class="item">
-          Bogotá - Colombia 
-        </div>
+      
+      <div class="socials">
+        <a target="_blank" href="https://w.app/Yz2XHI">
+          <img src={whatsapp.src} alt="Whatsapp" />
+        </a>
+        <a target="_blank" href="https://www.instagram.com/dugalutech/">
+          <img src={instagram.src} alt="Instagram">
+        </a>
       </div>
-    </div>
-    
-    <div class="socials">
-      <a target="_blank" href="https://w.app/Yz2XHI">
-        <img src={whatsapp.src} alt="Whatsapp" />
-      </a>
-      <a target="_blank" href="https://www.instagram.com/dugalutech/">
-        <img src={instagram.src} alt="Instagram">
-      </a>
     </div>
   </div>
 </footer>
