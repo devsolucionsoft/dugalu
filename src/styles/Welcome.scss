@@ -324,6 +324,10 @@ footer {
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
+      gap: 40px;
+      @media (max-width: 1200px) {
+        flex-wrap: wrap;
+      }
       .col {
         display: flex;
         flex-direction: column;
