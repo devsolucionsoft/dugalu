@@ -141,12 +141,12 @@ header {
           flex-direction: column;
           gap: 4px;
           color: $primary-color;
-          font-weight: 300;
+          font-weight: 400;
           font-size: clamp(1.25rem, 3vw, 1.6875rem);
           line-height: clamp(1.5rem, 3.5vw, 1.625rem);
           letter-spacing: -0.05em;
           h3 {
-            font-weight: 300 !important;
+            font-weight: 400 !important;
             font-size: clamp(1.25rem, 3vw, 1.6875rem) !important;
           }
         }
@@ -312,7 +312,7 @@ footer {
     color: white;
     max-width: 1400px;
     height: 100%;
-    padding: 8% 7% 19% 7%;
+    padding: 7% 7% 18% 7%;
     margin: 0 auto;
     gap: 40px;
     width: 100%;
