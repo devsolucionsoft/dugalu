@@ -375,16 +375,25 @@ footer {
         gap: 20px;
         align-items: center;
         align-self: flex-end;
+
         a {
           width: 44px;
           height: 44px;
+          border: 1px solid white;
+          border-radius: 50%;
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           @media (max-width: 768px) {
             width: 35px;
             height: 35px;
+            padding: 7px;
           }
           img {
             max-width: 44px;
             max-height: 44px;
+
             @media (max-width: 768px) {
               max-width: 35px;
               max-height: 35px;
