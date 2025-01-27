@@ -377,11 +377,11 @@ footer {
         align-self: flex-end;
 
         a {
-          width: 44px;
-          height: 44px;
+          width: 40px;
+          height: 40px;
           border: 1px solid white;
           border-radius: 50%;
-          padding: 10px;
+          padding: 9px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -391,8 +391,8 @@ footer {
             padding: 7px;
           }
           img {
-            max-width: 44px;
-            max-height: 44px;
+            max-width: 40px;
+            max-height: 40px;
 
             @media (max-width: 768px) {
               max-width: 35px;
