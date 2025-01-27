@@ -13,6 +13,7 @@ import segurosMundial from '../assets/images/clients/seguros-mundial.png'
 import '../styles/Welcome.scss';
 import backgroundVideo3 from '../assets/videos/footer-video.mp4';
 import whatsapp from '../assets/images/socials/whatsapp.png';
+import linkedin from '../assets/images/socials/linkedin.svg';
 import instagram from '../assets/images/socials/instagram.svg';
 import sales from '../assets/videos/sales.mp4';
 import marketing from '../assets/videos/marketing.mp4';
@@ -174,8 +175,8 @@ import Carousel from './Carousel.astro';
       </div>
       
       <div class="socials">
-        <a target="_blank" href="https://w.app/Yz2XHI">
-          <img src={whatsapp.src} alt="Whatsapp" />
+        <a target="_blank" href="https://www.linkedin.com/company/dugaluco/">
+          <img src={linkedin.src} alt="Linkedin" />
         </a>
         <a target="_blank" href="https://www.instagram.com/dugalutech/">
           <img src={instagram.src} alt="Instagram">
@@ -185,3 +186,10 @@ import Carousel from './Carousel.astro';
   </div>
 </footer>
 <div class="black-line"/>
+
+<div id="whatsapp-button">
+  <a href="https://w.app/Yz2XHI" target="_blank" rel="noopener noreferrer">
+    <img src={whatsapp.src} alt="Chat with us on WhatsApp" />
+  </a>
+  <span class="tooltip">¿Necesitas ayuda?</span>
+</div>
