@@ -1,0 +1,85 @@
+---
+import alpina from '../assets/images/clients/alpina.svg';
+import disney from '../assets/images/clients/disney.svg';
+import novartis from '../assets/images/clients/novartis.svg';
+import henkel from '../assets/images/clients/henkel.svg';
+import agp from '../assets/images/clients/agp.svg';
+import samsung from '../assets/images/clients/samsung.svg';
+import davivienda from '../assets/images/clients/davivienda.svg';
+import phr from '../assets/images/clients/phr.svg';
+import sodexo from '../assets/images/clients/sodexo.svg';
+import pracodidacol from '../assets/images/clients/pracodidacol.svg';
+import closeIcon from '../assets/icons/close.svg';
+import ibm from '../assets/images/clients/ibm.svg';
+import mapfre from '../assets/images/clients/mapfre.svg';
+import eltiempo from '../assets/images/clients/eltiempo.svg';
+import jaguar from '../assets/images/clients/jaguar.svg';
+import grasco from '../assets/images/clients/grasco.svg';
+import banco_occidente from '../assets/images/clients/banco-occidente.svg';
+import puerto_barranquilla from '../assets/images/clients/puerto-barranquilla.svg';
+import renault from '../assets/images/clients/renault.svg';
+import coviandes from '../assets/images/clients/coviandes.svg';
+import totto from '../assets/images/clients/totto.svg';
+---
+
+<div id="modal-overlay" class="modal-overlay hidden">
+    <div class="clientes-modal">
+        <div class="modal-header">
+            <h2>Clientes que han trabajado y confiado en nosotros</h2>
+            <button id="modal-close" class="close-button">
+                <img src={closeIcon.src} alt="Cerrar" />
+            </button>
+        </div>
+        <div class="modal-divider"></div>
+        <div class="modal-body">
+            <div class="column white">
+                <img src={alpina.src} alt="Alpina" />
+                <img src={disney.src} alt="Disney" />
+                <img src={novartis.src} alt="Novartis" />
+                <img src={henkel.src} alt="Henkel" />
+                <img src={agp.src} alt="Banco de Occidente" />
+                <img src={samsung.src} alt="Samsung" />
+                <img src={davivienda.src} alt="Davivienda" />
+                <img src={phr.src} alt="PHR" />
+                <img src={sodexo.src} alt="Sodexo" />
+                <img src={pracodidacol.src} alt="Pracodidacol" />
+            </div>
+            <div class="column black">
+                <img src={ibm.src} alt="IBM" />
+                <img src={mapfre.src} alt="Mapfre" />
+                <img src={eltiempo.src} alt="El Tiempo" />
+                <img src={jaguar.src} alt="Jaguar" />
+                <img src={grasco.src} alt="Grasco" />
+                <img src={banco_occidente.src} alt="Banco de Occidente" />
+                <img src={puerto_barranquilla.src} alt="Puerto Barranquilla" />
+                <img src={renault.src} alt="Renaut"/>
+                <img src={coviandes.src} alt="Coviandes" />
+                <img src={totto.src} alt="Totto" />
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p>* Dugalu SAS antes ECS (Enigmind cloud services)</p>
+        </div>
+    </div>
+</div>
+  
+<script>
+const openModal = document.getElementById('open-modal');
+const closeModal = document.getElementById('modal-close');
+const overlay = document.getElementById('modal-overlay');
+
+openModal?.addEventListener('click', () => {
+    overlay?.classList.remove('hidden');
+});
+
+closeModal?.addEventListener('click', () => {
+    overlay?.classList.add('hidden');
+});
+
+overlay?.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+    overlay.classList.add('hidden');
+    }
+});
+</script>
+  
