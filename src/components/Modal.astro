@@ -64,22 +64,30 @@ import totto from '../assets/images/clients/totto.svg';
 </div>
   
 <script>
+const overlay = document.getElementById('modal-overlay') as HTMLElement | null;
 const openModal = document.getElementById('open-modal');
 const closeModal = document.getElementById('modal-close');
-const overlay = document.getElementById('modal-overlay');
+const body = document.body;
 
 openModal?.addEventListener('click', () => {
-    overlay?.classList.remove('hidden');
+  if (overlay) {
+    overlay.classList.remove('hidden');
+    body.style.overflow = 'hidden';
+    overlay.scrollTop = 0;
+  }
 });
 
 closeModal?.addEventListener('click', () => {
-    overlay?.classList.add('hidden');
+  if (overlay) {
+    overlay.classList.add('hidden');
+    body.style.overflow = '';
+  }
 });
 
 overlay?.addEventListener('click', (e) => {
-    if (e.target === overlay) {
+  if (e.target === overlay) {
     overlay.classList.add('hidden');
-    }
+    body.style.overflow = '';
+  }
 });
 </script>
-  

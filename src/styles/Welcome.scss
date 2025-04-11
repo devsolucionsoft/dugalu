@@ -638,17 +638,23 @@ footer {
   z-index: 9999;
   animation: fadeIn 0.3s ease;
   overflow: auto;
-  @media (max-width: 768px) {
-    align-items: flex-start;
-  }
   &.hidden {
     display: none;
   }
+  @media (max-width: 768px) {
+    align-items: flex-start;
+  }
   .clientes-modal {
     max-width: 1000px;
-    margin: 0 auto;
-    overflow: hidden;
+    width: 100%;
+    margin: 2rem auto;
+    overflow: auto;
     animation: scaleIn 0.3s ease;
+    max-height: 90vh;
+    @media (max-width: 768px) {
+      margin: auto;
+      max-height: 100%;
+    }
 
     .modal-header {
       background: #d4145a;
@@ -692,7 +698,7 @@ footer {
       .column {
         flex: 1;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         column-gap: 56px;
         row-gap: 39px;
         padding: 8.5px 40px;
