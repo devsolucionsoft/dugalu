@@ -532,10 +532,14 @@ footer {
   z-index: 1000;
   background-color: #25d562;
   border-radius: 50%;
-  padding: 12px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
+  opacity: 1;
   transform: translateX(-50px);
   animation: fadeRight 0.5s ease-out forwards, pulse 1s infinite;
   aspect-ratio: 1/1;
@@ -756,7 +760,7 @@ footer {
       }
 
       .modal-body {
-        flex-direction: column;
+        flex-direction: row;
 
         .column {
           padding: 24px 16px;
