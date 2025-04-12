@@ -142,7 +142,7 @@ import Modal from './Modal.astro';
     </div>
     <Carousel images={[manuelita, segurosMundial, dinant, adea, detektor, indumil, prolibu, macarena]}/>
     <div class="buttons-container">
-      <a id="whatsapp-link" class="btn pink-btn" href="#" target="_blank" rel="noopener noreferrer">
+      <a class="btn pink-btn whatsapp-link" href="#" target="_blank" rel="noopener noreferrer">
         Quiero ser parte
       </a>
       <button class="btn white-btn" id="open-modal">
@@ -198,7 +198,7 @@ import Modal from './Modal.astro';
 </footer>
 <div class="black-line"/>
 
-<a id="whatsapp-link" href="#" target="_blank" rel="noopener noreferrer">
+<a class="whatsapp-link" href="#" target="_blank" rel="noopener noreferrer">
   <div id="whatsapp-button">
     <img src={whatsapp.src} alt="Chat with us on WhatsApp" />
     <span class="tooltip">¡Hola! Estamos aquí para ayudarte 👉🏻</span>
@@ -208,11 +208,12 @@ import Modal from './Modal.astro';
 <script>
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-  const whatsappLink = document.getElementById('whatsapp-link');
+  const whatsappLinks = document.querySelectorAll('.whatsapp-link');
+  const href = isMobile
+    ? 'https://wa.me/573025639562?text=¡Hola!%20Quisiera%20más%20información'
+    : 'https://web.whatsapp.com/send?phone=573025639562&text=¡Hola!%20Quisiera%20más%20información';
 
-  if (isMobile) {
-    whatsappLink.href = 'https://wa.me/573025639562?text=¡Hola!%20Quisiera%20más%20información';
-  } else {
-    whatsappLink.href = 'https://web.whatsapp.com/send?phone=573025639562&text=¡Hola!%20Quisiera%20más%20información';
-  }
+  whatsappLinks.forEach(link => {
+    link.href = href;
+  });
 </script>
