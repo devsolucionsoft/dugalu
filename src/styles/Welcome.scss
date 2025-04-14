@@ -401,22 +401,20 @@ footer {
           height: 40px;
           border: 1px solid white;
           border-radius: 50%;
-          padding: 9px;
           display: flex;
           align-items: center;
           justify-content: center;
           @media (max-width: 768px) {
             width: 35px;
             height: 35px;
-            padding: 7px;
           }
           img {
-            max-width: 40px;
-            max-height: 40px;
+            max-width: 24px;
+            max-height: 24px;
 
             @media (max-width: 768px) {
-              max-width: 35px;
-              max-height: 35px;
+              max-width: 20px;
+              max-height: 20px;
             }
           }
         }
