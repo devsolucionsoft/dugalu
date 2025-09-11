@@ -1,5 +1,5 @@
 // Variables
-$primary-color: #d4145a;
+$primary-color: #f40009;
 
 h1,
 h2,
@@ -29,7 +29,7 @@ a:hover {
 }
 
 header {
-  background-color: $primary-color;
+  background-color: #737373;
   height: 6vh;
   padding: 0 5%;
   display: flex;
@@ -81,12 +81,11 @@ header {
       }
     }
     h1 {
-      font-weight: 400;
       font-style: normal;
       color: white;
       font-kerning: none;
       text-decoration: none;
-      font-size: clamp(3rem, 10vw, 4.375rem);
+      font-size: clamp(2.33rem, 3.5vw, 4.3rem);
       line-height: 1.2;
       letter-spacing: -0.04em;
       text-align: left;
@@ -124,13 +123,13 @@ header {
       width: 100%;
 
       h2 {
-        font-weight: 400;
-        font-style: normal;
+        font-weight: 700;
         color: $primary-color;
         font-kerning: none;
-        font-size: clamp(2.5rem, 4vw, 3.8125rem);
+        font-size: clamp(2.1rem, 4vw, 2.8rem);
         line-height: clamp(3rem, 5vw, 4.125rem);
         letter-spacing: -0.05em;
+        text-transform: uppercase;
       }
       h3 {
         color: black;
@@ -156,13 +155,12 @@ header {
           flex-direction: column;
           gap: 4px;
           color: $primary-color;
-          font-weight: 400;
           font-size: clamp(1.25rem, 3vw, 1.6875rem);
           line-height: clamp(1.5rem, 3.5vw, 1.625rem);
           letter-spacing: -0.05em;
           h3 {
-            font-weight: 400 !important;
-            font-size: clamp(1.25rem, 3vw, 1.6875rem) !important;
+            font-weight: 500;
+            font-size: clamp(1.25rem, 3vw, 1.125rem) !important;
           }
         }
         .video-container {
@@ -177,7 +175,7 @@ header {
         h4 {
           color: black;
           font-weight: 300;
-          font-size: clamp(0.9375rem, 2vw, 1.0625rem);
+          font-size: clamp(0.9375rem, 2vw, 0.8125rem);
           line-height: clamp(1.25rem, 2.5vw, 1.375rem);
           letter-spacing: 0em;
           width: 97%;
@@ -266,7 +264,7 @@ header {
 }
 
 #clients {
-  background-color: white;
+  background-color: #edf0f2;
   align-items: center;
   justify-content: center;
   .content {
@@ -282,12 +280,13 @@ header {
       padding: 15% 7%;
     }
     h3 {
-      font-weight: 400;
+      font-weight: 700;
       color: black;
-      font-size: clamp(3.1rem, 5vw, 4rem);
+      font-size: clamp(2.1rem, 4vw, 2.8rem);
       line-height: 1.2;
       letter-spacing: -0.02em;
       text-align: left;
+      text-transform: uppercase;
     }
     .clients {
       display: grid;
@@ -322,6 +321,10 @@ footer {
   display: flex;
   position: relative;
   background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  @media (max-width: 1200px) {
+    height: fit-content;
+  }
   #background-video-3 {
     position: absolute;
     top: 0;
@@ -341,8 +344,8 @@ footer {
     margin: 0 auto;
     gap: 100px;
     width: 100%;
+    height: 100%;
     @media (max-width: 1200px) {
-      flex-wrap: wrap;
       padding: 30% 7% 30% 7%;
     }
     .footer-items {
@@ -358,6 +361,12 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        height: 100%;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        @media (max-width: 768px) {
+          height: fit-content;
+        }
         .sec {
           display: flex;
           flex-direction: column;
@@ -369,6 +378,10 @@ footer {
             letter-spacing: 0em;
             white-space: nowrap;
             font-weight: 200;
+            line-height: 1.4;
+            flex-wrap: wrap;
+            display: flex;
+            flex-direction: row;
             span {
               font-weight: 600;
             }
@@ -376,17 +389,14 @@ footer {
         }
       }
       h4 {
-        font-weight: 400;
-        font-size: clamp(3rem, 4.5vw, 3.6875rem);
-        line-height: 1;
+        font-weight: 700;
+        font-size: clamp(2rem, 3vw, 2.5rem);
+        line-height: 1.15;
         letter-spacing: -0.02em;
-        margin-bottom: 40px !important;
         max-width: 550px;
-        @media (max-width: 1200px) {
-          margin-bottom: 20px !important;
-        }
-        @media (max-width: 768px) {
-          margin-bottom: 0px !important;
+        text-transform: uppercase;
+        span {
+          color: $primary-color;
         }
       }
       .socials {
@@ -614,7 +624,7 @@ footer {
   cursor: pointer;
   transition: background-color 0.3s ease, filter 0.3s ease;
   &.pink-btn {
-    background-color: #d4145a;
+    background-color: #f40009;
     color: white;
     &:hover {
       filter: brightness(90%);
@@ -659,7 +669,7 @@ footer {
     }
 
     .modal-header {
-      background: #d4145a;
+      background: #f40009;
       padding: 43px 106px;
       position: relative;
       display: flex;

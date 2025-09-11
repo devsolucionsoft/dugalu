@@ -1,29 +1,29 @@
 ---
-import dugaluLogo from '../assets/images/dugalu.png';
-import backgroundVideo from '../assets/videos/banner-video.mp4';
-import backgroundVideo2 from '../assets/videos/services-video.mp4';
-import adea from '../assets/images/clients/adea.png'
-import detektor from '../assets/images/clients/detektor.png'
-import dinant from '../assets/images/clients/dinant.png'
-import indumil from '../assets/images/clients/indumil.png'
-import macarena from '../assets/images/clients/macarena.png'
-import manuelita from '../assets/images/clients/manuelita.png'
-import prolibu from '../assets/images/clients/prolibu.png'
-import segurosMundial from '../assets/images/clients/seguros-mundial.png'
-import '../styles/Welcome.scss';
-import backgroundVideo3 from '../assets/videos/footer-video.mp4';
-import whatsapp from '../assets/images/socials/whatsapp.png';
-import linkedin from '../assets/images/socials/linkedin.svg';
-import instagram from '../assets/images/socials/instagram.svg';
-import sales from '../assets/videos/sales.mp4';
-import marketing from '../assets/videos/marketing.mp4';
-import technology from '../assets/videos/technology.mp4';
-import Carousel from './Carousel.astro';
-import Modal from './Modal.astro';
+import dugaluLogo from "../assets/icons/dugalu.png";
+import dugaluWhiteLogo from "../assets/icons/dugalu-white.png";
+import backgroundVideo from "../assets/videos/banner-video.mp4";
+import adea from "../assets/images/clients/adea.png";
+import detektor from "../assets/images/clients/detektor.png";
+import dinant from "../assets/images/clients/dinant.png";
+import indumil from "../assets/images/clients/indumil.png";
+import macarena from "../assets/images/clients/macarena.png";
+import manuelita from "../assets/images/clients/manuelita.png";
+import prolibu from "../assets/images/clients/prolibu.png";
+import segurosMundial from "../assets/images/clients/seguros-mundial.png";
+import "../styles/Welcome.scss";
+import backgroundVideo3 from "../assets/videos/footer-video.mp4";
+import whatsapp from "../assets/images/socials/whatsapp.png";
+import linkedin from "../assets/images/socials/linkedin.svg";
+import instagram from "../assets/images/socials/instagram.svg";
+import sales from "../assets/videos/sales.mp4";
+import marketing from "../assets/videos/marketing.mp4";
+import technology from "../assets/videos/technology.mp4";
+import Carousel from "./Carousel.astro";
+import Modal from "./Modal.astro";
 ---
 
 <header>
-  <p>Pronto conocerás nuestro nuevo sitio web </p>
+  <p>Muy pronto conocerás nuestro nuevo sitio web</p>
 </header>
 
 <div id="banner">
@@ -33,73 +33,108 @@ import Modal from './Modal.astro';
   </video>
 
   <section data-aos="fade-up" data-aos-duration="2000" id="hero">
-    <img src={dugaluLogo.src} width="145" height="48.4949" alt="Dugalu Icon" />
-    <div/>
-    <h1>Somos una compañía especializada en <span>marketing</span>, ventas & tecnología. </h1>
-    <div/>
+    <img src={dugaluLogo.src} width="145" alt="Dugalu Icon" />
+    <div></div>
+    <h1>
+      A MARKETING AND SALES <span>INNOVATION COMPANY</span> DESIGNED TO DRIVE GROWTH
+      IN THE AGE OF INTELLIGENCE.
+    </h1>
+    <div></div>
   </section>
 </div>
 
 <div id="goal">
   <div class="content">
-    <div data-aos="fade-right"  class="message">
-      <h2>Nuestra Meta</h2>
-      <h3>Ayudarte a organizar y alinear tres áreas clave de tu empresa: marketing, ventas y tecnología,  para que logres un crecimiento rentable y sostenible.</h3>
+    <div data-aos="fade-right" class="message">
+      <h2>Nuestros Servicios</h2>
+      <h3>
+        Integramos comunicación y tecnología para impulsar valor e impacto en
+        personas y marcas.
+      </h3>
     </div>
-  
+
     <div class="items">
       <div class="item">
         <div class="title">
-          <span>01</span>
-          <h3>Marketing</h3>
+          <h3>Pauta Publicitaria</h3>
         </div>
         <div class="video-container">
-          <video data-aos="fade-right" data-aos-delay="500" data-aos="fade-right" autoplay loop muted playsinline preload="auto">
+          <video
+            data-aos="fade-right"
+            data-aos-delay="500"
+            data-aos="fade-right"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+          >
             <source src={marketing} type="video/mp4" />
             Tu navegador no soporta videos.
+          </video>
         </div>
-        </video>
         <h4>
-          Impulsamos tu marca para que ganes mayor visibilidad y multipliques tus oportunidades de negocio. 
+          Creamos campañas publicitarias dirigidas en redes sociales para
+          aumentar la visibilidad de tu marca, conectar con tu audiencia e
+          impulsar las conversiones. Nuestro equipo optimiza cada campaña para
+          asegurar el máximo retorno de la inversión (ROI).
         </h4>
       </div>
-  
+
       <div class="item">
         <div class="title">
-          <span>02</span>
-          <h3>Ventas </h3>
+          <h3>Consultoria en transformación digital</h3>
         </div>
         <div class="video-container">
-          <video data-aos="fade-right" data-aos-delay="600" autoplay loop muted playsinline preload="auto">
+          <video
+            data-aos="fade-right"
+            data-aos-delay="600"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+          >
             <source src={sales} type="video/mp4" />
             Tu navegador no soporta videos.
           </video>
         </div>
         <h4>
-          Entrenamos a tu equipo comercial para que gestione mejor los leads generados por marketing, logres más ventas y tengas un mayor retorno de inversión.
+          Auditamos tu proceso comercial, detectamos oportunidades y desplegamos
+          herramientas tecnológicas que implementamos contigo para mejorar la
+          eficiencia y acelerar el crecimiento de tu empresa.
         </h4>
       </div>
-  
+
       <div class="item">
         <div class="title">
-          <span>03</span>
-          <h3>Tecnología</h3>
+          <h3>Diseño de experiencia al cliente con AI</h3>
         </div>
         <div class="video-container">
-          <video data-aos="fade-right" data-aos-delay="700" autoplay loop muted playsinline preload="auto">
+          <video
+            data-aos="fade-right"
+            data-aos-delay="700"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+          >
             <source src={technology} type="video/mp4" />
             Tu navegador no soporta videos.
           </video>
         </div>
         <h4>
-          Te asesoramos en la implementación y uso de la mejor tecnología para automatizar tu proceso de marketing, ventas y servicio al cliente.
+          Rediseñamos la experiencia digital de tus clientes con automatización
+          cognitiva, haciendo cada interacción más inteligente, eficiente y
+          personalizada, a escala.
         </h4>
       </div>
     </div>
   </div>
 </div>
 
-<div id="services">
+<!-- <div id="services">
   <video id="background-video-2" autoplay loop muted playsinline preload="auto">
     <source src={backgroundVideo2} type="video/mp4" />
     Tu navegador no soporta videos.
@@ -109,8 +144,9 @@ import Modal from './Modal.astro';
     <div class="message">
       <h2>Nuestros servicios</h2>
       <h3>
-        A lo largo de 15 años de trayectoria, hemos tenido el privilegio de colaborar con pequeñas y
-        grandes empresas de diversos sectores en Estados Unidos y LATAM. 
+        A lo largo de 15 años de trayectoria, hemos tenido el privilegio de
+        colaborar con pequeñas y grandes empresas de diversos sectores en
+        Estados Unidos y LATAM.
       </h3>
     </div>
     <div class="items" data-aos="fade-right" data-aos-duration="2000">
@@ -125,34 +161,89 @@ import Modal from './Modal.astro';
       <div class="item">Automatización</div>
     </div>
   </div>
-</div>
+</div> -->
 
 <div id="clients">
   <div class="content">
-    <h3>Algunos de nuestro clientes</h3>
+    <h3>Nuestros clientes</h3>
     <div class="clients">
-      <img data-aos="fade-up" data-aos-delay="100" src={manuelita.src} alt="Manuelita" />
-      <img data-aos="fade-up" data-aos-delay="200" src={segurosMundial.src} alt="Seguros Mundial" />
-      <img data-aos="fade-up" data-aos-delay="300" src={dinant.src} alt="Dinant" />
-      <img class="adea" data-aos="fade-up" data-aos-delay="400" src={adea.src} alt="Adea" />
-      <img data-aos="fade-up" data-aos-delay="100" src={detektor.src} alt="Detektor" />  
-      <img data-aos="fade-up" data-aos-delay="200" src={indumil.src} alt="Indumil" />
-      <img data-aos="fade-up" data-aos-delay="300" src={prolibu.src} alt="Prolibu" />
-      <img data-aos="fade-up" data-aos-delay="400" src={macarena.src} alt="Macarena" />
+      <img
+        data-aos="fade-up"
+        data-aos-delay="100"
+        src={manuelita.src}
+        alt="Manuelita"
+      />
+      <img
+        data-aos="fade-up"
+        data-aos-delay="200"
+        src={segurosMundial.src}
+        alt="Seguros Mundial"
+      />
+      <img
+        data-aos="fade-up"
+        data-aos-delay="300"
+        src={dinant.src}
+        alt="Dinant"
+      />
+      <img
+        class="adea"
+        data-aos="fade-up"
+        data-aos-delay="400"
+        src={adea.src}
+        alt="Adea"
+      />
+      <img
+        data-aos="fade-up"
+        data-aos-delay="100"
+        src={detektor.src}
+        alt="Detektor"
+      />
+      <img
+        data-aos="fade-up"
+        data-aos-delay="200"
+        src={indumil.src}
+        alt="Indumil"
+      />
+      <img
+        data-aos="fade-up"
+        data-aos-delay="300"
+        src={prolibu.src}
+        alt="Prolibu"
+      />
+      <img
+        data-aos="fade-up"
+        data-aos-delay="400"
+        src={macarena.src}
+        alt="Macarena"
+      />
     </div>
-    <Carousel images={[manuelita, segurosMundial, dinant, adea, detektor, indumil, prolibu, macarena]}/>
+    <Carousel
+      images={[
+        manuelita,
+        segurosMundial,
+        dinant,
+        adea,
+        detektor,
+        indumil,
+        prolibu,
+        macarena,
+      ]}
+    />
     <div class="buttons-container">
-      <a class="btn pink-btn whatsapp-link" href="#" target="_blank" rel="noopener noreferrer">
+      <a
+        class="btn pink-btn whatsapp-link"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Quiero ser parte
       </a>
-      <button class="btn white-btn" id="open-modal">
-        Ver más 
-      </button>
+      <button class="btn white-btn" id="open-modal"> Ver más </button>
     </div>
   </div>
 </div>
 
-<Modal/>
+<Modal />
 
 <footer>
   <video id="background-video-3" autoplay loop muted playsinline preload="auto">
@@ -161,42 +252,43 @@ import Modal from './Modal.astro';
   </video>
 
   <div class="content">
-    <img src={dugaluLogo.src} width="109" height="37" alt="Dugalu" />
+    <img src={dugaluWhiteLogo.src} width="120" alt="Dugalu" />
 
     <div class="footer-items">
-      <h4>¿Quieres aumentar tus ventas?</h4>
+      <h4>
+        Descubre cómo la tecnología puede <span>transformar</span> tu proceso de
+        ventas.
+      </h4>
 
       <div class="col">
         <div class="sec">
           <div class="item">
-            <span>Escríbenos: </span>conecta@dugalu.com
+            <span>Contáctanos: </span>ntorres@dugalu.com
           </div>
           <div class="item">
-            <span>Teléfono: </span>+573025639562
+            <span>Teléfono: </span>+573107967925
           </div>
         </div>
         <div class="sec">
           <div class="item">
             <span>Carrera 59 # 152-19 Piso 3</span>
           </div>
-          <div class="item">
-            Bogotá - Colombia 
-          </div>
+          <div class="item">Bogotá - Colombia</div>
         </div>
       </div>
-      
+
       <div class="socials">
         <a target="_blank" href="https://www.linkedin.com/company/dugaluco/">
           <img src={linkedin.src} alt="Linkedin" />
         </a>
         <a target="_blank" href="https://www.instagram.com/dugalutech/">
-          <img src={instagram.src} alt="Instagram">
+          <img src={instagram.src} alt="Instagram" />
         </a>
       </div>
     </div>
   </div>
 </footer>
-<div class="black-line"/>
+<div class="black-line"></div>
 
 <a class="whatsapp-link" href="#" target="_blank" rel="noopener noreferrer">
   <div id="whatsapp-button">
@@ -208,12 +300,12 @@ import Modal from './Modal.astro';
 <script>
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-  const whatsappLinks = document.querySelectorAll('.whatsapp-link');
+  const whatsappLinks = document.querySelectorAll(".whatsapp-link");
   const href = isMobile
-    ? 'https://wa.me/573025639562?text=¡Hola!%20Quisiera%20más%20información'
-    : 'https://web.whatsapp.com/send?phone=573025639562&text=¡Hola!%20Quisiera%20más%20información';
+    ? "https://wa.me/573025639562?text=¡Hola!%20Quisiera%20más%20información"
+    : "https://web.whatsapp.com/send?phone=573025639562&text=¡Hola!%20Quisiera%20más%20información";
 
-  whatsappLinks.forEach(link => {
+  whatsappLinks.forEach((link) => {
     link.href = href;
   });
 </script>
