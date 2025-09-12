@@ -1,5 +1,6 @@
 ---
 import "aos/dist/aos.css";
+import ogImage from "../assets/images/og-image.png";
 ---
 
 <!doctype html>
@@ -25,7 +26,7 @@ import "aos/dist/aos.css";
       property="og:description"
       content="Logra que tus áreas de marketing, ventas y tecnología trabajen en armonía. Te ayudamos a organizarlas y alinearlas para que tu empresa crezca de forma rentable y sostenible. Si quieres vender más en canales digitales, contáctanos."
     />
-    <meta property="og:image" content="https://dugalu.vercel.app/favicon.png" />
+    <meta property="og:image" content={ogImage.src} />
     <meta property="og:type" content="website" />
 
     <title>Dugalu | Marketing + Ventas + Tecnología</title>
