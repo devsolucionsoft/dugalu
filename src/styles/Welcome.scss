@@ -1,6 +1,100 @@
 // Variables
 $primary-color: #f40009;
 
+// Font Definitions - Satoshi
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/satoshi/Satoshi-Light.woff2") format("woff2"),
+    url("../assets/fonts/satoshi/Satoshi-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/satoshi/Satoshi-LightItalic.woff2") format("woff2"),
+    url("../assets/fonts/satoshi/Satoshi-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/satoshi/Satoshi-Regular.woff2") format("woff2"),
+    url("../assets/fonts/satoshi/Satoshi-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/satoshi/Satoshi-Italic.woff2") format("woff2"),
+    url("../assets/fonts/satoshi/Satoshi-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/satoshi/Satoshi-Medium.woff2") format("woff2"),
+    url("../assets/fonts/satoshi/Satoshi-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/satoshi/Satoshi-MediumItalic.woff2") format("woff2"),
+    url("../assets/fonts/satoshi/Satoshi-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/satoshi/Satoshi-Bold.woff2") format("woff2"),
+    url("../assets/fonts/satoshi/Satoshi-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/satoshi/Satoshi-BoldItalic.woff2") format("woff2"),
+    url("../assets/fonts/satoshi/Satoshi-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/satoshi/Satoshi-Black.woff2") format("woff2"),
+    url("../assets/fonts/satoshi/Satoshi-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/satoshi/Satoshi-BlackItalic.woff2") format("woff2"),
+    url("../assets/fonts/satoshi/Satoshi-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+// Font Family Variables con Fallbacks
+$font-satoshi: "Satoshi", "Helvetica Neue", "Arial", sans-serif;
+
 h1,
 h2,
 h3,
@@ -41,11 +135,12 @@ header {
     font-size: clamp(0.9rem, 2.5vw, 1.05rem);
     line-height: 1.2;
     letter-spacing: 0em;
+    font-family: "Open Sans", sans-serif;
   }
 }
 
 #banner {
-  height: 90vh;
+  height: 85vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -71,7 +166,7 @@ header {
     color: white;
     max-width: 1400px;
     height: 100%;
-    padding: 3% 7% 10% 7%;
+    padding: 7% 7% 5% 7%;
     width: 100%;
     @media (max-width: 768px) {
       padding: 10% 7%;
@@ -91,6 +186,7 @@ header {
       text-align: left;
       max-width: 1100px;
       margin-top: 95px !important;
+      font-weight: 700;
       span {
         color: $primary-color;
       }
@@ -140,27 +236,31 @@ header {
         line-height: clamp(1.75rem, 3.5vw, 2.125rem);
         letter-spacing: -0.05em;
         max-width: 1000px;
+        font-family: $font-satoshi;
       }
     }
     .items {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      grid-auto-rows: 1fr; // Esto hace que todas las filas tengan la misma altura
       gap: 29px;
       .item {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-rows: auto 1fr auto; // Título - Video - Descripción
         gap: 16px;
+        height: 100%; // Asegurar que todos tengan la misma altura
         .title {
           display: flex;
           flex-direction: column;
           gap: 4px;
           color: $primary-color;
-          font-size: clamp(1.25rem, 3vw, 1.6875rem);
-          line-height: clamp(1.5rem, 3.5vw, 1.625rem);
+          font-size: clamp(1.5rem, 4vw, 2rem);
+          line-height: clamp(1.75rem, 4vw, 2.125rem);
           letter-spacing: -0.05em;
+          min-height: 60px; // Altura mínima para los títulos
           h3 {
             font-weight: 500;
-            font-size: clamp(1.25rem, 3vw, 1.125rem) !important;
+            font-size: clamp(1.5rem, 4vw, 1.5rem) !important;
           }
         }
         .video-container {
@@ -179,6 +279,7 @@ header {
           line-height: clamp(1.25rem, 2.5vw, 1.375rem);
           letter-spacing: 0em;
           width: 97%;
+          font-family: $font-satoshi;
         }
       }
     }
@@ -280,7 +381,7 @@ header {
       padding: 15% 7%;
     }
     h3 {
-      font-weight: 700;
+      font-weight: 800;
       color: black;
       font-size: clamp(2.1rem, 4vw, 2.8rem);
       line-height: 1.2;
@@ -321,7 +422,6 @@ footer {
   display: flex;
   position: relative;
   background: rgba(0, 0, 0, 0.9);
-  height: 100%;
   @media (max-width: 1200px) {
     height: fit-content;
   }
@@ -340,14 +440,11 @@ footer {
     color: white;
     max-width: 1400px;
     height: 100%;
-    padding: 10% 7% 10% 7%;
+    padding: 10% 7%;
     margin: 0 auto;
     gap: 100px;
     width: 100%;
     height: 100%;
-    @media (max-width: 1200px) {
-      padding: 30% 7% 30% 7%;
-    }
     .footer-items {
       display: flex;
       flex-direction: row;
@@ -382,6 +479,7 @@ footer {
             flex-wrap: wrap;
             display: flex;
             flex-direction: row;
+            gap: 4px;
             span {
               font-weight: 600;
             }
@@ -389,7 +487,7 @@ footer {
         }
       }
       h4 {
-        font-weight: 700;
+        font-weight: 800;
         font-size: clamp(2rem, 3vw, 2.5rem);
         line-height: 1.15;
         letter-spacing: -0.02em;
@@ -700,7 +798,7 @@ footer {
 
     .modal-divider {
       height: 20px;
-      background: #78ccff;
+      background: #dde1eb;
     }
 
     .modal-body {
