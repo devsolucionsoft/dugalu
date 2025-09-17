@@ -245,8 +245,8 @@ header {
       grid-auto-rows: 1fr; // Esto hace que todas las filas tengan la misma altura
       gap: 29px;
       .item {
-        display: grid;
-        grid-template-rows: auto 1fr auto; // Título - Video - Descripción
+        display: flex;
+        flex-direction: column;
         gap: 16px;
         height: 100%; // Asegurar que todos tengan la misma altura
         .title {
@@ -258,6 +258,9 @@ header {
           line-height: clamp(1.75rem, 4vw, 2.125rem);
           letter-spacing: -0.05em;
           min-height: 68px; // Altura mínima para los títulos
+          @media (max-width: 768px) {
+            min-height: auto;
+          }
           h3 {
             font-weight: 500;
             font-size: clamp(1.5rem, 4vw, 1.5rem) !important;
