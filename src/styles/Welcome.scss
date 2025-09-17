@@ -247,7 +247,7 @@ header {
       .item {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 8px;
         height: 100%; // Asegurar que todos tengan la misma altura
         .title {
           display: flex;
@@ -283,6 +283,7 @@ header {
           letter-spacing: 0em;
           width: 97%;
           font-family: $font-satoshi;
+          margin-top: 4px;
         }
       }
     }
