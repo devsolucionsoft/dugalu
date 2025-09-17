@@ -444,9 +444,9 @@ footer {
     color: white;
     max-width: 1400px;
     height: 100%;
-    padding: 12% 7%;
+    padding: 10% 7% 12% 7%;
     margin: 0 auto;
-    gap: 50px;
+    gap: 60px;
     width: 100%;
     height: 100%;
     .dugalu-logo {
@@ -468,6 +468,7 @@ footer {
         height: 100%;
         justify-content: space-between;
         margin-bottom: 8px;
+        font-family: "Mulish", sans-serif !important;
         @media (max-width: 768px) {
           height: fit-content;
         }
@@ -500,6 +501,7 @@ footer {
         letter-spacing: -0.02em;
         max-width: 550px;
         text-transform: uppercase;
+        max-width: 450px;
         span {
           color: $primary-color;
         }
