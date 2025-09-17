@@ -215,7 +215,7 @@ header {
     .message {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 25px;
       width: 100%;
 
       h2 {
@@ -229,11 +229,11 @@ header {
       }
       h3 {
         color: black;
-        font-weight: 400;
+        font-weight: 300;
         font-kerning: none;
         text-decoration: none;
         font-size: clamp(1.5rem, 3vw, 2rem);
-        line-height: clamp(1.4rem, 2.5vw, 1.7rem);
+        line-height: clamp(1.6rem, 3vw, 2rem);
         letter-spacing: -0.05em;
         max-width: 1000px;
         font-family: $font-satoshi;
@@ -247,7 +247,7 @@ header {
       .item {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 16px;
         height: 100%; // Asegurar que todos tengan la misma altura
         .title {
           display: flex;
@@ -255,7 +255,6 @@ header {
           gap: 4px;
           color: $primary-color;
           font-size: clamp(1.5rem, 4vw, 2rem);
-          line-height: clamp(1.75rem, 4vw, 2.125rem);
           letter-spacing: -0.05em;
           min-height: 68px; // Altura mínima para los títulos
           @media (max-width: 768px) {
@@ -264,11 +263,12 @@ header {
           h3 {
             font-weight: 500;
             font-size: clamp(1.5rem, 4vw, 1.5rem) !important;
+            line-height: 1 !important;
           }
         }
         .video-container {
           overflow: hidden;
-          aspect-ratio: 16 / 9;
+          aspect-ratio: 426/224;
           video {
             height: 100%;
             width: 100%;
