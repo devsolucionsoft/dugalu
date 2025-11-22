@@ -444,7 +444,7 @@ footer {
     color: white;
     max-width: 1400px;
     height: 100%;
-    padding: 8% 7% 15% 7%;
+    padding: 8% 7% 2% 7%;
     margin: 0 auto;
     gap: 60px;
     width: 100%;
@@ -535,6 +535,22 @@ footer {
               max-height: 20px;
             }
           }
+        }
+      }
+    }
+    .legal-links {
+      margin-top: 100px;
+      flex-wrap: wrap;
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      font-size: clamp(1.25rem, 3vw, 1.4375rem);
+      line-height: 1.2;
+      letter-spacing: 0em;
+      a {
+        color: white;
+        &:hover {
+          text-decoration: underline;
         }
       }
     }
